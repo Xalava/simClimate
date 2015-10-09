@@ -1,0 +1,142 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<title>Sim Climate v0.1</title>
+
+	<link rel="stylesheet" href="https://cask.scotch.io/bootstrap-4.0.css">
+
+	<link rel="shortcut icon" href="favicon.png">
+
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+	<header class="jumbotron">
+		<h1>Sim Climate</h1>
+		<p>The COP21 Negociation Simulation App</p>
+		<p><i>v0.1</i></p>
+	</header>
+
+	<div class="row">
+		<section class="charts">
+			<div class="col-md-6">	
+				<canvas id="emChart" width="300" height="300"></canvas>
+			</div>
+			<div class="col-md-6">	
+				<canvas id="tempChart" width="300" height="300"></canvas>
+			</div>
+		</section>
+	</div> <!-- row -->
+	<div class="row">
+		<section class="inputs">
+
+			<table class="table table-striped">
+				<tr>
+					<th>Country</th>
+			    	<th>Stabilization CO2 (y)</th> 
+			    	<th>Reduction CO2 (y)</th>
+			    	<th>Reduction CO2 (%)</th> 
+				</tr>
+				<tr>
+					<td>USA</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+					<td>China</td> 
+					<td></td>
+					<td></td>
+					<td></td> 
+				</tr>
+			</table>
+
+
+		
+
+		</section>
+	</div> <!-- row -->
+
+
+
+
+	<div class="row">
+
+	</div>
+
+</div> <!-- container -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+var emCtx = document.getElementById("emChart").getContext("2d");
+var tempCtx = document.getElementById("tempChart").getContext("2d");
+
+
+var emData = {
+    labels: ["2015", "2030", "2045", "2060", "2075", "2090", "2105"],
+    datasets: [
+        {
+            label: "USA",
+            fillColor: "rgba(220,20,20,0.2)",
+            strokeColor: "rgba(220,20,20,1)",
+            pointColor: "rgba(220,20,20,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [32, 30, 34, 37, 41, 43, 46]
+        },
+        {
+            label: "China",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [22, 29, 40, 57, 66, 75, 83]
+        }
+    ]
+};
+
+var tempData = {
+    labels: ["2015", "2030", "2045", "2060", "2075", "2090", "2105"],
+    datasets: [
+        {
+            label: "projection",
+            fillColor: "rgba(220,20,20,0.2)",
+            strokeColor: "rgba(220,20,20,1)",
+            pointColor: "rgba(220,20,20,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [0.7, 0.9, 1.5, 1.7, 2, 3, 4]
+        },
+        {
+            label: "target",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [2, 2, 2, 2, 2, 2,2]
+        }
+    ]
+};
+
+new Chart(emCtx).Line(emData);
+new Chart(tempCtx).Line(tempData);
+
+
+	</script>
+
+
+</body>
+
+
+
+
