@@ -19,6 +19,16 @@ stroke: #FDB45C;
   stroke-width: 3px;
 }
 
+.ct-series-e .ct-line {
+  stroke: #59922b;
+  stroke-width: 3px;
+}
+
+.ct-series-f .ct-line {
+  stroke: #453d3f;
+  stroke-width: 3px;
+}
+
 .jumbotron {
   background-color: rgba(151,187,205,1) !important;
   /*66DFDD;*/

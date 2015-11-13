@@ -1,18 +1,18 @@
-<template name="group">		
+<template name="player">		
 	
 				<tr class="{{validation}}">
 					<td ><button style="background-color:{{color}}; color:white;" type="button" class="btn btn-block" data-toggle="modal" data-target="#{{groupName}}Strat">{{groupName}}</button></td>
-			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="Year stabilization" type="text" id="yearStabilization" placeholder="2100"></td> 
-			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="Year reduction" type="text" id="yearReduction" placeholder="2100"></td>
+			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="Consultation" type="text" id="yearStabilization" placeholder="100%"></td> 
+			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="Nombre de posts" type="text" id="yearReduction" placeholder="100%"></td>
 
-			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="reduction percentage" type="text" id="percentageReduction" placeholder="0%"></td> 
-
+			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="Suppression de données" type="text" id="percentageReduction" placeholder="0%"></td> 
 			    	<td></td> 
 
 
 			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="Deforestation" type="text" id="deforestation" placeholder="100%"></td> 
 			    	<td><input class="form-control" maxlength="2048" name="" autocomplete="off" title="Afforestation" type="text" id="afforestation" placeholder="0%"></td>
 				</tr>
+
 
 			<div class="modal fade" id="{{groupName}}Strat" tabindex="-1" role="dialog" aria-labelledby="{{groupName}} strategy">
 			  <div class="modal-dialog" role="document">
