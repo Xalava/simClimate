@@ -1,5 +1,5 @@
 
-Template.player.events({
+Template.group.events({
  "change #yearStabilization": function (event) { 
       // Really basic validation graphical feedback
       groupsInputs.update(this._id,{$set: {validation: ""}});
