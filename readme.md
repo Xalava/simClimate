@@ -66,3 +66,27 @@ vu
 
 
 http://www.ibm.com/developerworks/web/library/wa-meteor-webapps/index.html#download
+
+
+## ChangeLog
+
+0.1 Septembre 2015
+	prototypePrototype
+
+0.2 Test monopage
+
+0.3 
+	passage à meteor, 
+	premiere entierement fonctionnelement
+
+0.4	6 novembre
+	intégration des données du GIEC
+	6 pays 
+	bascule deploiement sur simclimatefr.meteor.com
+0.4.1
+	Nouveau nom: deux degres
+	deploiement sur deuxdegres.meteor.com
+	affichage des visualisations
+	fin de la francisation
+
+0.5 retour à un page sans meteor
