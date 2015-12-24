@@ -2,11 +2,8 @@
 The COP21 Negociation Simulation 
 
 ## TODO
-- add precise data
-- precise algorythme
- - tabs for several grpahs
-
-## Roadmap features
+- precise algorithme
+- tabs for several grpahs
 - Static Webpage
 - retreave results on a server
 - desktop (offline ) version
@@ -15,8 +12,12 @@ The COP21 Negociation Simulation
 - put global objective > to 
 - bilingual shit
 
+## Done (See changelog)
+- add precise data 
+- 
+## Technologies 
 
-## Technologies
+### Envisagées
 	Graphiques:
 		D3.js
 		sigma.js
@@ -28,12 +29,12 @@ The COP21 Negociation Simulation
 		google charts: maps
 	Main page
 		html/CSS/JS
-		React?
-		Polymer?
+		React
+		Polymer
 		boostratp
 		meteor poly
-		Ember?
-
+		Ember
+		
 		https://github.com/kriasoft/react-starter-kit
 		ou 
 		web starter kit de google
@@ -41,19 +42,26 @@ The COP21 Negociation Simulation
 	Design
 		Bootstrap 4
 	Server
-		Meteor?
+		Meteor
 			flowrouter
 
 	Desktop
-		Webktip
+		NW.js
 		electron
-## Meteor installe
 
-meteor add ian:accounts-ui-bootstrap-3
- meteor add twbs:bootstrap
+### Utilisées
+- meteor
+- chartist
+- chart.js
+- bootstrap 4 
 
-meteor add service-configuration
-meteor add accounts-ui accounts-password
+#### Notes Meteor install
+
+	meteor add ian:accounts-ui-bootstrap-3
+	meteor add twbs:bootstrap
+
+	meteor add service-configuration
+	meteor add accounts-ui accounts-password
 
 ## Quelque doc
 
@@ -74,7 +82,7 @@ http://www.ibm.com/developerworks/web/library/wa-meteor-webapps/index.html#downl
 ## ChangeLog
 
 0.1 Septembre 2015
-	prototypePrototype
+	Premier Prototype
 
 0.2 Test monopage
 
@@ -84,6 +92,7 @@ http://www.ibm.com/developerworks/web/library/wa-meteor-webapps/index.html#downl
 
 0.4	6 novembre
 	intégration des données du GIEC
+	données précises
 	6 pays 
 	bascule deploiement sur simclimatefr.meteor.com
 
@@ -98,8 +107,3 @@ http://www.ibm.com/developerworks/web/library/wa-meteor-webapps/index.html#downl
 		ajout fond vert, conséquences..
 
 0.5 retour à un page sans meteor ?
-
-## Quelque doc
-
-http://www.okgrow.com/posts/2015/09/17/flow-router-migration-guide/
-git
