@@ -3,10 +3,37 @@
 
 			<div class="col-sm-6">	
 				<!-- <canvas id="emChart" width="300" height="300"></canvas> -->
-				<div class="ct-chart ct-perfect-fourth"></div>
+
+
+
+				<div>
+
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i>Emissions par groupe (Gt CO2 eq) </i></a></li>
+				    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i>Emissions par habitant </i></a></li>
+
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active fade in" id="home">
+    					<div class="ct-chart ct-perfect-fourth"></div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane fade" id="profile">
+    					<div class="ct-chart ct-perfect-fourth"></div>
+				    </div>
+
+				  </div>
+
+				</div>
+
+
+
+
 
 				<br/>
-				<i>Emission Gt CO2 eq per country group</i>
+				
 			</div>
 			<div class="col-sm-6">	
 				<canvas id="tempChart" width="300" height="300"></canvas>
@@ -15,11 +42,40 @@
 
 
 				 <br/>
-				<i>Global temperature: projection vs goal</i>
+				<i>Température globale: projection vs objectif</i>
+				<button type="button" class="btn btn-info btn-xs pull-right" data-toggle="modal" data-target="#csq">Consequences</button>
+
 			</div>
 
 			<!-- <div class="ct-chart ct-perfect-fourth"></div> -->
 <!-- <button type="button" class="btn btn-default btn-warning" aria-label="Left Align" id="reloadgraphs">
   <span class="glyphicon glyphicon-refresh" aria-hidden="true" ></span> Reload graphs
 </button> -->
+
+
+
+
+
+			<div class="modal fade" id="csq"  role="dialog" aria-labelledby="myModalLabel2">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h2 class="modal-title" id="myModalLabel2">Conséquences</h2>
+			      </div>
+			      <div class="modal-body">
+			      		      	
+			      				      <img class="img-responsive" src="Consequences.png">
+			      	
+			      </div>
+
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+
+
 	</template>

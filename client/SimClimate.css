@@ -1,4 +1,5 @@
 /* CSS declarations go here */
+
 /* Chartist  */
 .ct-series-a .ct-line {
   stroke: rgba(220,20,20,1);
@@ -16,6 +17,16 @@
 }
 .ct-series-d .ct-line {
 stroke: #FDB45C;
+  stroke-width: 3px;
+}
+
+.ct-series-e .ct-line {
+  stroke: #59922b;
+  stroke-width: 3px;
+}
+
+.ct-series-f .ct-line {
+  stroke: #453d3f;
   stroke-width: 3px;
 }
 
