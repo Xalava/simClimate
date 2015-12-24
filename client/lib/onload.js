@@ -1,5 +1,6 @@
 groupsInputs = new Meteor.Collection(null);
 
+
 // Emission data in Data.js
 
 // global Setting
