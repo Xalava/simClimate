@@ -87,6 +87,54 @@ Template.group.events({
     return false;
   },
 
+"change #deforestation": function (event) { 
+        groupsInputs.update(this._id,{$set: {validation: ""}});
+
+  //TODO gérer 0,1 et 0.1 
+    var collectedValue = Number($(event.target).val());
+    if (collectedValue >= 0 && collectedValue < 101 ){
+      groupsInputs.update(this._id,{$set: {deforestation: collectedValue}});
+      console.log("deforestation",collectedValue, this.order);
+
+      forest.deforestation[this.order] = collectedValue;
+
+      refreshTemp();
+      refreshCharts();
+    } else {
+      console.log("deforestation incorrect");
+      groupsInputs.update(this._id,{$set: {validation: "has-error"}});
+      
+    }
+
+    // Prevent default form submit
+    return false;
+  },
+
+
+"change #afforestation": function (event) { 
+        groupsInputs.update(this._id,{$set: {validation: ""}});
+
+  //TODO gérer 0,1 et 0.1 
+    var collectedValue = Number($(event.target).val());
+    if (collectedValue >= 0 && collectedValue < 101 ){
+      groupsInputs.update(this._id,{$set: {afforestation: collectedValue}});
+      console.log("afforestation",collectedValue, this.order);
+      forest.afforestation[this.order]= collectedValue;
+
+      refreshTemp();
+      refreshCharts();
+    } else {
+      console.log("afforestation incorrect");
+      groupsInputs.update(this._id,{$set: {validation: "has-error"}});
+      
+    }
+
+    // Prevent default form submit
+    return false;
+  },
+
+
+
 
 });
 
@@ -186,15 +234,21 @@ refreshTemp = function(){
   // start at 2 step
  for (var i = 1; i <= 6; i++) {
     var SumCO= 0;
-    // TODO: maxorder devrait etre une variable
-    for (var j = MAXORDER; j >= 0; j--) {
+    // Maxorder définit dans onload.js. actuellement 3
+
+    //for each group
+    for (var groupi = MAXORDER; groupi >= 0; groupi--) {
+      //we do the integral of emission over past 15 years
       for (var k = (i-1)*15; k < i*15; k++) {
-        SumCO = emissionsData.series[j][k] + SumCO;
+        SumCO = emissionsData.series[groupi][k] + SumCO;
       };
-      // TODO +defforestation - afforestation per country
+      
+      // +deforestation - afforestation per country
+     SumCO = SumCO + forest.deforestation[groupi]/100 - forest.afforestation[groupi]/100
     };
+    console.log(SumCO);
   
-  tempData.datasets[0].data[i]=tempData.datasets[0].data[i-1]+(SumCO/1200);
+  tempData.datasets[0].data[i]=tempData.datasets[0].data[i-1]+(SumCO/1990);
 
  };
 

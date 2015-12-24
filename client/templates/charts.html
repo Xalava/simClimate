@@ -3,10 +3,37 @@
 
 			<div class="col-sm-6">	
 				<!-- <canvas id="emChart" width="300" height="300"></canvas> -->
-				<div class="ct-chart ct-perfect-fourth"></div>
+
+
+
+				<div>
+
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i>Emissions par groupe (Gt CO2 eq) </i></a></li>
+				    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i>Emissions par habitant </i></a></li>
+
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active fade in" id="home">
+    					<div class="ct-chart ct-perfect-fourth"></div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane fade" id="profile">
+    					<div class="ct-chart ct-perfect-fourth"></div>
+				    </div>
+
+				  </div>
+
+				</div>
+
+
+
+
 
 				<br/>
-				<i>Emissions Gt CO2 eq par groupe de pays</i>
+				
 			</div>
 			<div class="col-sm-6">	
 				<canvas id="tempChart" width="300" height="300"></canvas>
@@ -15,7 +42,7 @@
 
 
 				 <br/>
-				<i>Température glable: projection vs objectif</i>
+				<i>Température globale: projection vs objectif</i>
 				<button type="button" class="btn btn-info btn-xs pull-right" data-toggle="modal" data-target="#csq">Consequences</button>
 
 			</div>
@@ -37,11 +64,9 @@
 			        <h2 class="modal-title" id="myModalLabel2">Conséquences</h2>
 			      </div>
 			      <div class="modal-body">
+			      		      	
+			      				      <img class="img-responsive" src="Consequences.png">
 			      	
-			      				      <img src="Consequences.png">
-
-
-
 			      </div>
 
 			      <div class="modal-footer">
