@@ -5,6 +5,7 @@ The COP21 Negociation Simulation
 - add precise data
 - precise algorythme
  - tabs for several grpahs
+
 ## Roadmap features
 - Static Webpage
 - retreave results on a server
@@ -13,6 +14,7 @@ The COP21 Negociation Simulation
 - allow apps
 - put global objective > to 
 - bilingual shit
+
 
 ## Technologies
 	Graphiques:
@@ -35,6 +37,7 @@ The COP21 Negociation Simulation
 		https://github.com/kriasoft/react-starter-kit
 		ou 
 		web starter kit de google
+
 	Design
 		Bootstrap 4
 	Server
@@ -83,10 +86,20 @@ http://www.ibm.com/developerworks/web/library/wa-meteor-webapps/index.html#downl
 	intégration des données du GIEC
 	6 pays 
 	bascule deploiement sur simclimatefr.meteor.com
+
 0.4.1
 	Nouveau nom: deux degres
 	deploiement sur deuxdegres.meteor.com
 	affichage des visualisations
 	fin de la francisation
 
-0.5 retour à un page sans meteor
+0.4.2 décembre 2015
+	Amélioriations suite à MDC
+		ajout fond vert, conséquences..
+
+0.5 retour à un page sans meteor ?
+
+## Quelque doc
+
+http://www.okgrow.com/posts/2015/09/17/flow-router-migration-guide/
+git
